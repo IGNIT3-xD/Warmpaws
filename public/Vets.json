@@ -1,0 +1,42 @@
+[
+    {
+        "vetId": 201,
+        "vetImg": "https://petta.jwsuperthemes.com/wp-content/uploads/2016/01/team1.jpg",
+        "vetName": "Dr. Sarah Chen, DVM",
+        "specialty": "Preventive Care & Internal Medicine",
+        "yearsExperience": 12,
+        "rating": 4.9,
+        "description": "Board-certified veterinarian specializing in comprehensive wellness exams, diagnostics, and managing chronic conditions in dogs and cats.",
+        "contactPhone": "(555) 123-4567"
+    },
+    {
+        "vetId": 202,
+        "vetImg": "https://i.ibb.co/pjHT03Yc/Zw.jpg",
+        "vetName": "Dr. Ben Carter, VMD",
+        "specialty": "Emergency & Critical Care Surgery",
+        "yearsExperience": 8,
+        "rating": 4.7,
+        "description": "Focuses on urgent medical interventions, complex soft tissue surgery, and 24/7 critical patient monitoring.",
+        "contactPhone": "(555) 987-6543"
+    },
+    {
+        "vetId": 203,
+        "vetImg": "https://petta.jwsuperthemes.com/wp-content/uploads/2016/01/team2.jpg",
+        "vetName": "Dr. Emily Hayes, DVM",
+        "specialty": "Avian & Exotic Animal Medicine",
+        "yearsExperience": 18,
+        "rating": 5.0,
+        "description": "Highly experienced in treating birds, reptiles, rabbits, and small mammals, with a focus on nutrition and habitat advice.",
+        "contactPhone": "(555) 234-5678"
+    },
+    {
+        "vetId": 204,
+        "vetImg": "https://i.ibb.co/m50nMNPh/image.png",
+        "vetName": "Dr. Marcus Jones, BVSc",
+        "specialty": "Veterinary Dentistry",
+        "yearsExperience": 7,
+        "rating": 4.8,
+        "description": "Dedicated to advanced pet dental procedures, including preventative cleanings, extractions, and oral surgery.",
+        "contactPhone": "(555) 345-6789"
+    }
+]

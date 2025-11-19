@@ -1,0 +1,74 @@
+[
+    {
+        "serviceId": 101,
+        "serviceName": "Deluxe Bath and Grooming (All Breeds)",
+        "providerName": "The Furry Friends Spa",
+        "providerEmail": "grooming@furryfriendsspa.net",
+        "price": 55,
+        "rating": 4.5,
+        "slotsAvailable": 8,
+        "description": "Includes professional wash, blow dry, nail trim, ear cleaning, and custom styling.",
+        "image": "https://i.ibb.co/CsN87vFb/image.png",
+        "category": "Grooming"
+    },
+    {
+        "serviceId": 102,
+        "serviceName": "Overnight Pet Sitting",
+        "providerName": "Happy Paws Home Stays",
+        "providerEmail": "bookings@happypaws.org",
+        "price": 40,
+        "rating": 5.0,
+        "slotsAvailable": 2,
+        "description": "24-hour in-home care, including feeding, walks, playtime, and medication administration.",
+        "image": "https://i.ibb.co/DHdvBH5g/image.png",
+        "category": "Boarding"
+    },
+    {
+        "serviceId": 103,
+        "serviceName": "Puppy Basic Obedience Training",
+        "providerName": "Canine College",
+        "providerEmail": "trainers@caninecollege.edu",
+        "price": 150,
+        "rating": 4.0,
+        "slotsAvailable": 6,
+        "description": "Six-week group course covering essential commands (sit, stay, heel) and house training.",
+        "image": "https://i.ibb.co/N22Bdb31/image.png",
+        "category": "Training"
+    },
+    {
+        "serviceId": 104,
+        "serviceName": "Veterinary Check-up and Vaccinations",
+        "providerName": "City Animal Hospital",
+        "providerEmail": "appointments@cityvet.com",
+        "price": 85,
+        "rating": 4.3,
+        "slotsAvailable": 10,
+        "description": "Comprehensive annual exam, health assessment, and core vaccinations for dogs or cats.",
+        "image": "https://i.ibb.co/whZWSSGC/image.png",
+        "category": "Veterinary"
+    },
+    {
+        "serviceId": 105,
+        "serviceName": "Daily 30-Minute Dog Walk",
+        "providerName": "Walkies & Wags",
+        "providerEmail": "contact@walkiesandwags.net",
+        "price": 18,
+        "rating": 4.6,
+        "slotsAvailable": 15,
+        "description": "A brisk 30-minute walk in your neighborhood for exercise and potty breaks.",
+        "image": "https://i.ibb.co/67crgYTp/image.png",
+        "category": "Walking"
+    },
+    {
+        "serviceId": 106,
+        "serviceName": "Nutritional Consultation for Senior Pets",
+        "providerName": "Pet Health Experts",
+        "providerEmail": "nutrition@pethealthexperts.co",
+        "price": 60,
+        "rating": 3.5,
+        "slotsAvailable": 3,
+        "description": "Personalized diet plan and supplement recommendations tailored for aging pets' needs.",
+        "image": "https://i.ibb.co/dw0rM2fL/image.png",
+        "category": "Health & Wellness"
+    }
+]

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+     themes: light --default;
+}
+
+.navbar a.active {
+     text-decoration: underline;
+     color: green;
+}
+
+.auth-bg {
+     background: linear-gradient(rgba(0, 0, 0, 0.4)), url("/src/assets/bg.jpg");
+     background-position: bottom center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
