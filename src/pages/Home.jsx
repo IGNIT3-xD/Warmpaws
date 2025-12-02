@@ -56,7 +56,7 @@ const Home = () => {
             </section>
 
             {/* Services Section */}
-            <section className="pt-16">
+            <section className="pt-12">
                 <h1 className='text-center font-bold text-3xl md:text-4xl mb-4' data-aos="fade-up">
                     Popular Winter Care <span className='text-green-700'>Services</span>
                 </h1>
