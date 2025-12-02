@@ -9,7 +9,7 @@ const Tips = () => {
     }, [])
 
     return (
-        <div className='my-10 w-11/12 mx-auto'>
+        <div className='my-8 w-11/12 mx-auto'>
             <h2 className="text-center font-bold text-3xl md:text-4xl mb-4">
                 Winter Care Tips for <span className="text-green-700">Pets</span>
             </h2>

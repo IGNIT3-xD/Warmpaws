@@ -251,11 +251,11 @@ const Services = () => {
                                 </button>
                             </div>
                         ) : (
-                            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
                                 {filteredData.map(service => (
                                     <div
                                         key={service?.serviceId}
-                                        className="mx-auto bg-white border border-gray-200 shadow-md rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1 overflow-hidden flex flex-col h-full"
+                                        className="mx-auto w-96 md:w-80 lg:w-[300px] bg-white border border-gray-200 shadow-md rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1 overflow-hidden flex flex-col h-full"
                                     >
                                         {/* IMAGE */}
                                         <div className="h-48 w-full overflow-hidden">
@@ -298,7 +298,6 @@ const Services = () => {
                                             </Link>
                                         </div>
                                     </div>
-
                                 ))}
                             </div>
                         )}

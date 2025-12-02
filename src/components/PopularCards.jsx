@@ -15,32 +15,50 @@ const PopularCards = ({ servicesPromise }) => {
     return (
         <div className='my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-5 mx-auto w-11/12'>
             {
-                popularData.map(data =>
-                    <div key={data?.serviceId} className="mx-auto w-80 md:w-56 lg:w-72 bg-white border border-black/20 shadow-lg rounded-2xl hover:shadow-xl transition overflow-hidden">
-                        <div className="h-40 w-full overflow-hidden">
+                popularData.map(service =>
+                    <div
+                        key={service?.serviceId}
+                        className="mx-auto w-96 md:w-80 lg:w-[300px] bg-white border border-gray-200 shadow-md rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1 overflow-hidden flex flex-col h-full"
+                    >
+                        {/* IMAGE */}
+                        <div className="h-48 w-full overflow-hidden">
                             <img
-                                src={data?.image}
-                                alt="Pet service thumbnail"
-                                className="w-full h-full object-cover"
+                                src={service?.image}
+                                alt={service?.serviceName}
+                                className="w-full h-full object-cover hover:scale-110 duration-300"
                             />
                         </div>
-                        <div className="p-4 space-y-2">
+
+                        {/* CONTENT */}
+                        <div className="p-5 flex flex-col grow">
+
+                            {/* TITLE */}
                             <Link
-                                to={`/services/${data?.serviceId}`}
-                                className="text-base font-semibold text-gray-900 hover:text-blue-600 transition"
+                                to={`/services/${service?.serviceId}`}
+                                className="text-lg font-semibold text-gray-900 hover:text-green-700 transition-colors line-clamp-2 min-h-12"
                             >
-                                {data?.serviceName}
+                                {service?.serviceName}
                             </Link>
 
+                            {/* RATING + PRICE */}
+                            <div className="flex items-center justify-between mt-3">
+                                <div className="flex items-center gap-1">
+                                    <span className="text-yellow-500 text-lg">⭐</span>
+                                    <span className="text-gray-700 font-medium">{service?.rating}</span>
+                                </div>
 
-                            <div className="text-sm text-gray-500 leading-tight">
-                                Rating: <span className="text-yellow-500 font-medium">{data?.rating} ★</span>
+                                <span className="text-2xl font-bold text-green-700">
+                                    ${service?.price}
+                                </span>
                             </div>
 
-
-                            <div>
-                                <span className="text-xl font-bold text-green-600">$ {data?.price}</span>
-                            </div>
+                            {/* BUTTON (sticks at bottom) */}
+                            <Link
+                                to={`/services/${service?.serviceId}`}
+                                className="mt-auto block w-full text-center py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colors font-semibold"
+                            >
+                                View Details
+                            </Link>
                         </div>
                     </div>
                 )

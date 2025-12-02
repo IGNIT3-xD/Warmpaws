@@ -32,25 +32,25 @@ const Home = () => {
     return (
         <div className="bg-linear-to-b from-white to-gray-50">
             <Hero />
-
+            
             {/* Stats Section */}
             <section className="py-16 bg-green-700 text-white" data-aos="fade-up">
                 <div className="w-11/12 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
                         <h3 className="text-4xl font-bold mb-2">10K+</h3>
-                        <p className="text-xl text-green-100">Happy Pets</p>
+                        <p className="md:text-xl text-green-100">Happy Pets</p>
                     </div>
                     <div>
                         <h3 className="text-4xl font-bold mb-2">500+</h3>
-                        <p className="text-xl text-green-100">Services Done</p>
+                        <p className="md:text-xl text-green-100">Services Done</p>
                     </div>
                     <div>
                         <h3 className="text-4xl font-bold mb-2">50+</h3>
-                        <p className="text-xl text-green-100">Expert Vets</p>
+                        <p className="md:text-xl text-green-100">Expert Vets</p>
                     </div>
                     <div>
                         <h3 className="text-4xl font-bold mb-2">24/7</h3>
-                        <p className="text-xl text-green-100">Support</p>
+                        <p className="md:text-xl text-green-100">Support</p>
                     </div>
                 </div>
             </section>
@@ -71,7 +71,7 @@ const Home = () => {
             <Tips />
 
             {/* Testimonials Section */}
-            <section className="pb-16 bg-white" data-aos="fade-up">
+            <section className="pt-8 pb-16 bg-white" data-aos="fade-up">
                 <div className="w-11/12 max-w-6xl mx-auto">
                     <h2 className="text-center font-bold text-3xl md:text-4xl mb-4">
                         What Pet Parents <span className="text-green-700">Say</span>
@@ -156,7 +156,7 @@ const Home = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Enter your email address"
-                            className="flex-1 px-6 py-4 rounded-lg text-gray-800 focus:outline-none focus:ring-4 focus:ring-green-300"
+                            className="flex-1 px-6 py-4 rounded-lg text-gray-800 border focus:outline-none focus:ring-4 focus:ring-green-300"
                         />
                         <button
                             onClick={handleNewsletter}
