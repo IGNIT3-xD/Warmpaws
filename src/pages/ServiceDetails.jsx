@@ -1,93 +1,141 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import star from '../assets/star.gif'
-import { toast } from 'react-hot-toast';
-import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
+import star from '../assets/star.gif';
+import { toast } from 'react-hot-toast';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const ServiceDetails = () => {
-  const { setBook } = useContext(AuthContext)
-  const { id } = useParams()
-  const data = useLoaderData()
-  const [matchedData, setMatchedData] = useState([])
+  const { setBook } = useContext(AuthContext);
+  const { id } = useParams();
+  const data = useLoaderData();
+  const [matchedData, setMatchedData] = useState([]);
 
   useEffect(() => {
-    const filteredData = data.find(pet => pet.serviceId === parseInt(id))
+    const filteredData = data.find(pet => pet.serviceId === parseInt(id));
     setMatchedData(filteredData);
-  }, [data, id])
+  }, [data, id]);
 
   useEffect(() => {
-    document.body.style.overflowX = 'hidden'; 
     AOS.init();
-  }, [])
-
-  // console.log(data);
+    document.body.style.overflowX = 'hidden';
+  }, []);
 
   const handleBook = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
 
-    if (name.length === 0 || email.length === 0) {
-      toast.error('Please enter a valid name or email', {
-        position: 'bottom-center'
-      })
+    if (!name || !email) {
+      toast.error('Please enter a valid name or email', { position: 'bottom-center' });
       return;
     }
 
-    toast.success(`${name} has been book the ${matchedData.serviceName}`, {
-      position: 'bottom-center'
+    toast.success(`${name} has booked ${matchedData.serviceName}`, {
+      position: 'bottom-center',
     });
     e.target.reset();
-
-    setBook(prev => [...prev, matchedData])
-  }
+    setBook(prev => [...prev, matchedData]);
+  };
 
   const { image, serviceName, providerName, providerEmail, price, rating, slotsAvailable, description, category } = matchedData;
 
   return (
-    <div className='my-10 w-11/12 mx-auto'>
-      <div className='flex flex-col lg:flex-row gap-8 shadow p-4'>
-        <figure data-aos="fade-right" className='bg-white/50 p-2 border border-black/5 rounded-sm'>
-          <img className='w-96 mx-auto object-cover h-full rounded-sm md:w-full lg:w-96' src={image} alt="" />
+    <div className="w-11/12 mx-auto mt-26">
+
+      {/* Details Section */}
+      <div className="flex flex-col lg:flex-row gap-8 p-6 rounded-3xl shadow-xl bg-linear-to-br from-white to-green-50 border border-gray-200">
+
+        {/* Image */}
+        <figure
+          data-aos="fade-right"
+          className="bg-white rounded-2xl shadow p-3 w-full lg:w-1/2 flex justify-center"
+        >
+          <img
+            src={image}
+            alt={serviceName}
+            className="rounded-2xl w-full max-w-md object-cover"
+          />
         </figure>
-        <div data-aos="fade-left">
-          <p className='text-2xl font-bold'>{serviceName}</p>
-          <p className='text-black/60'>{description}</p>
+
+        {/* Text Content */}
+        <div data-aos="fade-left" className="space-y-3 lg:w-1/2">
+          <h1 className="text-3xl font-bold text-gray-900">{serviceName}</h1>
+          <p className="text-gray-600 leading-relaxed">{description}</p>
+
           <div className="divider"></div>
-          <p className='font-semibold'>Provider: <span className='text-black/70'>{providerName}</span></p>
-          <p className='font-semibold'>Provider Email: <span className='text-black/70'>{providerEmail}</span></p>
+
+          <p className="font-semibold">Provider: <span className="text-gray-700">{providerName}</span></p>
+          <p className="font-semibold">Email: <span className="text-gray-700">{providerEmail}</span></p>
+
           <div className="divider"></div>
-          <p className='font-semibold'>Slots available: {slotsAvailable}</p>
-          <div className='flex items-center justify-between'>
-            <p className='font-semibold flex items-center'>
-              <span>Rating: <span className='m-1'>{rating}</span></span>
-              <img className='w-6' src={star} alt="" />
+
+          <p className="font-semibold">Slots Available: {slotsAvailable}</p>
+
+          <div className="flex items-center justify-between mt-2">
+            <p className="font-semibold flex items-center gap-2">
+              Rating:
+              <span className="text-lg font-bold">{rating}</span>
+              <img className="w-7" src={star} alt="" />
             </p>
-            <p className='bg-green-700/80 text-white rounded-full p-2'>{category}</p>
+
+            <span className="px-3 py-1 bg-green-600 text-white rounded-full shadow text-sm">
+              {category}
+            </span>
           </div>
+
           <div className="divider"></div>
-          <p className='text-xl font-bold'>Price: ${price}</p>
+
+          <p className="text-2xl font-bold text-green-700">Price: ${price}</p>
         </div>
       </div>
 
-      <div className='flex flex-col items-center justify-center lg:flex-row gap-8 shadow my-10 p-5'>
-        <div className='text-center lg:text-left lg:flex-2'>
-          <h1 className='text-2xl lg:text-4xl font-bold'>Book Service <span className='text-green-700'>Now!!</span></h1>
-          <p className='text-black/60 lg:w-[80%] mt-2 mx-auto lg:mx-0'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam illum dolores eligendi aliquid cumque tempora praesentium doloremque, quibusdam culpa quasi.</p>
+      {/* Booking Form Section */}
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-10 my-12 p-10 rounded-3xl shadow-xl bg-white border border-gray-200">
+
+        {/* Text */}
+        <div className="text-center lg:text-left lg:w-1/2 space-y-4">
+          <h1 className="text-4xl font-bold">
+            Book This Service <span className="text-green-600">Now!</span>
+          </h1>
+          <p className="text-gray-600 leading-relaxed lg:w-4/5 mx-auto lg:mx-0">
+            Get premium pet care from trusted professionals. Fill out the form to secure your slot today!
+          </p>
         </div>
-        <form onSubmit={handleBook} className="lg:flex-1 card-body">
-          <fieldset className="fieldset shadow-sm p-4 w-90">
-            <label className="label">Name</label>
-            <input type="text" name='name' className="input placeholder:text-black/60" placeholder="Name" />
-            <label className="label">Email</label>
-            <input type="email" name='email' className="input placeholder:text-black/60" placeholder="user@mail.com" />
-            <button className="btn bg-green-700 text-white mt-4">Book Now</button>
-          </fieldset>
+
+        {/* Form */}
+        <form onSubmit={handleBook} className="lg:w-1/2 w-full">
+          <div className="shadow-lg p-6 rounded-2xl bg-linear-to-br from-green-50 to-white border border-gray-200 space-y-4">
+
+            <div>
+              <label className="block font-semibold">Name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                className="input input-bordered w-full rounded-xl"
+              />
+            </div>
+
+            <div>
+              <label className="block font-semibold">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="user@mail.com"
+                className="input input-bordered w-full rounded-xl"
+              />
+            </div>
+
+            <button className="btn bg-green-600 hover:bg-green-700 text-white w-full rounded-xl mt-3">
+              Book Now
+            </button>
+
+          </div>
         </form>
       </div>
+
     </div>
   );
 };

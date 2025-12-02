@@ -10,8 +10,14 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/services'}>Services</NavLink></li>
-        <li><NavLink to={'/profile'}>My Profile</NavLink></li>
-        <li><NavLink to={'/book'}>My Booking</NavLink></li>
+        {
+            user && <>
+                <li><NavLink to={'/profile'}>My Profile</NavLink></li>
+                <li><NavLink to={'/book'}>My Booking</NavLink></li>
+            </>
+        }
+        <li><NavLink to={'/about-us'}>About Us</NavLink></li>
+        <li><NavLink to={'/contact'}>Contact</NavLink></li>
     </>
 
     const handleLogout = () => {
@@ -24,7 +30,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 shadow-sm lg:px-12">
+        <div className="navbar bg-base-100 shadow-sm lg:px-12 fixed z-10 left-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,7 +44,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <Link to={'/'}><img className='w-22' src={logo} alt="Logo" /></Link>
+                <Link to={'/'}><img className='w-18 object-cover' src={logo} alt="Logo" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -54,7 +60,7 @@ const Navbar = () => {
                             <img className='border border-black/50 w-12 h-12 rounded-full m-2 object-cover hover:cursor-pointer' title={user?.displayName} src={user?.photoURL} alt="User Image" />
                             <button onClick={handleLogout} className='btn'>Log Out</button>
                         </> :
-                        <Link to={'/auth/login'} className="btn">Login / Register</Link>
+                        <Link to={'/auth/login'} className="btn btn-xs md:btn-md">Login / Register</Link>
                 }
             </div>
         </div>

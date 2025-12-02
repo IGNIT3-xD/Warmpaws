@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 const VetSlider = ({ vets }) => {
     return (
-        <div className="w-full my-5 p-4">
+        <div className="w-full p-4">
             <Swiper
                 modules={[Pagination, Autoplay, A11y]}
                 spaceBetween={30}

@@ -18,7 +18,7 @@ const Book = () => {
     }
 
     return (
-        <div className='w-11/12 mx-auto my-8'>
+        <div className='w-11/12 mx-auto my-24'>
             <p className='text-xl font-bold mb-5 text-center lg:text-left'>Your Booked <span className='text-green-700'>Services</span></p>
             <div className='space-y-5'>
                 {

@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 const SwiperSlider = ({ slides }) => {
     return (
-        <div className="w-full">
+        <div className="w-full pt-18">
             <Swiper
                 modules={[Pagination, Autoplay, A11y]}
                 spaceBetween={20}

@@ -12,6 +12,8 @@ import ForgetPass from "../pages/ForgetPass";
 import Loading from "../components/Loading";
 import Book from './../pages/Book';
 import Error from "../components/Error";
+import AboutUs from './../pages/AboutUs';
+import Contact from './../pages/Contact';
 
 export const router = createBrowserRouter([
     {
@@ -32,20 +34,26 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'services/:id',
-                element: <PrivateRoute>
-                    <ServiceDetails />
-                </PrivateRoute>,
+                element: <ServiceDetails />,
                 loader: () => fetch('/Data.json'),
                 hydrateFallbackElement: <Loading></Loading>,
                 errorElement: <Error></Error>
             },
             {
                 path: 'profile',
-                Component: MyProfile
+                element: <PrivateRoute><MyProfile /></PrivateRoute>
             },
             {
                 path: 'book',
-                Component: Book,
+                element: <PrivateRoute><Book /></PrivateRoute>
+            },
+            {
+                path: 'about-us',
+                Component: AboutUs
+            },
+            {
+                path: 'contact',
+                Component: Contact
             },
             {
                 path: '*',

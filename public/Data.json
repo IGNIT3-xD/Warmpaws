@@ -21,7 +21,7 @@
         "slotsAvailable": 2,
         "description": "24-hour in-home care, including feeding, walks, playtime, and medication administration.",
         "image": "https://i.ibb.co/DHdvBH5g/image.png",
-        "category": "Boarding"
+        "category": "Sitting"
     },
     {
         "serviceId": 103,
@@ -69,6 +69,78 @@
         "slotsAvailable": 3,
         "description": "Personalized diet plan and supplement recommendations tailored for aging pets' needs.",
         "image": "https://i.ibb.co/dw0rM2fL/image.png",
-        "category": "Health & Wellness"
+        "category": "Nutrition"
+    },
+    {
+        "serviceId": 107,
+        "serviceName": "Pet Dental Cleaning (Non-Anesthetic)",
+        "providerName": "Smiling Paws Vet Clinic",
+        "providerEmail": "dental@smilingpaws.com",
+        "price": 180,
+        "rating": 4.2,
+        "slotsAvailable": 5,
+        "description": "Professional, gentle scaling and polishing of teeth for healthy pets without the use of general anesthesia.",
+        "image": "https://i.ibb.co/R8Hf2Yd/SW1h-Z2-Ut-Ny5qc-Gc.jpg",
+        "category": "Veterinary"
+    },
+    {
+        "serviceId": 108,
+        "serviceName": "One-Hour Puppy Socialization Class",
+        "providerName": "The K9 Academy",
+        "providerEmail": "classes@k9academy.com",
+        "price": 35,
+        "rating": 4.9,
+        "slotsAvailable": 12,
+        "description": "Supervised group play and interaction designed to safely expose puppies (8-16 weeks) to new sights, sounds, and dogs.",
+        "image": "https://i.ibb.co/Hf1NvPs7/RVU9.jpg",
+        "category": "Training"
+    },
+    {
+        "serviceId": 109,
+        "serviceName": "Cat Luxury Hydro-Massage Bath",
+        "providerName": "Feline Fantasy Spa",
+        "providerEmail": "meow@felinefantasy.org",
+        "price": 45,
+        "rating": 4.5,
+        "slotsAvailable": 4,
+        "description": "Specialized calming bath with gentle hydro-massage jets and hypoallergenic shampoo, perfect for stressed cats.",
+        "image": "https://i.ibb.co/Hf1NvPs7/RVU9.jpg",
+        "category": "Grooming"
+    },
+    {
+        "serviceId": 110,
+        "serviceName": "Emergency Pet Transportation",
+        "providerName": "Rapid Pet Movers",
+        "providerEmail": "transport@rapidpet.net",
+        "price": 80,
+        "rating": 4.7,
+        "slotsAvailable": 2,
+        "description": "24/7 emergency transport service to and from veterinary clinics or hospitals within a 50-mile radius.",
+        "image": "https://i.ibb.co/ymbgJRsY/anBn.jpg",
+        "category": "Veterinary"
+    },
+    {
+        "serviceId": 111,
+        "serviceName": "Custom Pet Birthday Cake (Small)",
+        "providerName": "Barkery Bites",
+        "providerEmail": "orders@barkerybites.co",
+        "price": 20,
+        "rating": 4.6,
+        "slotsAvailable": 7,
+        "description": "Grain-free, pet-safe birthday cake (6-inch) made with sweet potato and peanut butter, customized with your pet's name.",
+        "image": "https://i.ibb.co/zh6MKTcG/OTcy-MDIx-ODUuan-Bn.jpg",
+        "category": "Nutrition"
+    },
+    {
+        "serviceId": 112,
+        "serviceName": "Reiki Energy Session for Pets",
+        "providerName": "Holistic Animal Healing",
+        "providerEmail": "reiki@holisticanimal.info",
+        "price": 50,
+        "rating": 4.0,
+        "slotsAvailable": 6,
+        "description": "Non-invasive energy healing session designed to promote relaxation, reduce anxiety, and support the natural healing process in animals.",
+        "image": "https://i.ibb.co/cpW2fB3/anBn.jpg",
+        "category": "Nutrition"
     }
 ]
