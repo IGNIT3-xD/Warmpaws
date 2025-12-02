@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 
 const PopularCards = ({ servicesPromise }) => {
     const data = use(servicesPromise)
-    const popularData = data.sort((a, b) => b.rating - a.rating)
+    const popularData = data.sort((a, b) => b.rating - a.rating).slice(0, 6)
     // console.log(popularData);
 
     useEffect(() => {
