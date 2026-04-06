@@ -7,6 +7,7 @@ import Tips from '../components/Tips';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Loading from './../components/Loading';
+import CountUp from 'react-countup';
 
 const servicesPromise = fetch('/Data.json')
     .then(res => res.json())
@@ -37,15 +38,15 @@ const Home = () => {
             <section className="py-16 bg-green-700 text-white" data-aos="fade-up">
                 <div className="w-11/12 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
-                        <h3 className="text-4xl font-bold mb-2">10K+</h3>
+                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} delay={1} end={100} />+</h3>
                         <p className="md:text-xl text-green-100">Happy Pets</p>
                     </div>
                     <div>
-                        <h3 className="text-4xl font-bold mb-2">500+</h3>
+                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} delay={1} end={250} />+</h3>
                         <p className="md:text-xl text-green-100">Services Done</p>
                     </div>
                     <div>
-                        <h3 className="text-4xl font-bold mb-2">50+</h3>
+                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} delay={1} end={20} />+</h3>
                         <p className="md:text-xl text-green-100">Expert Vets</p>
                     </div>
                     <div>
@@ -128,7 +129,7 @@ const Home = () => {
             </section>
 
             {/* Vets Section */}
-            <section className="pb-16 bg-gray-50">
+            <section className="pt-5 pb-16 bg-gray-50">
                 <h1 className='text-center font-bold text-3xl md:text-4xl mb-4' data-aos="fade-up">
                     Meet Our Expert <span className='text-green-700'>Vets</span>
                 </h1>

@@ -13,7 +13,7 @@ const PopularCards = ({ servicesPromise }) => {
     }, [])
 
     return (
-        <div className='my-10 grid md:grid-cols-3 lg:grid-cols-4 gap-5 mx-auto w-11/12'>
+        <div className='my-10 grid md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5 lg:gap-7 mx-auto w-11/12'>
             {
                 popularData.map(service =>
                     <div
@@ -63,7 +63,6 @@ const PopularCards = ({ servicesPromise }) => {
                     </div>
                 )
             }
-            <Link to={'/services'} className='grid md:col-span-3 lg:col-span-4 text-green-700 hover:underline'>See more...</Link>
         </div>
     );
 };

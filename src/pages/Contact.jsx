@@ -13,26 +13,26 @@ export default function Contact() {
             {/* Contact Info Cards */}
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mt-14 w-full">
                 {/* Phone */}
-                <div className="p-6 rounded-2xl shadow border bg-white text-center space-y-2">
+                <div className="p-6 rounded-2xl shadow border border-black/10 bg-white text-center space-y-2 hover:-translate-y-1.5 duration-300 ease-in-out">
                     <h3 className="text-lg font-semibold text-green-700">Phone</h3>
                     <p className="text-gray-600 text-sm">+1 (555) 123-4567</p>
                 </div>
 
                 {/* Email */}
-                <div className="p-6 rounded-2xl shadow border bg-white text-center space-y-2">
+                <div className="p-6 rounded-2xl shadow border border-black/10 bg-white text-center space-y-2 hover:-translate-y-1.5 duration-300 ease-in-out">
                     <h3 className="text-lg font-semibold text-green-700">Email</h3>
                     <p className="text-gray-600 text-sm">support@petcarehub.com</p>
                 </div>
 
                 {/* Location */}
-                <div className="p-6 rounded-2xl shadow border bg-white text-center space-y-2">
+                <div className="p-6 rounded-2xl shadow border border-black/10 bg-white text-center space-y-2 hover:-translate-y-1.5 duration-300 ease-in-out">
                     <h3 className="text-lg font-semibold text-green-700">Location</h3>
                     <p className="text-gray-600 text-sm">123 Pet Street, Animal City</p>
                 </div>
             </div>
 
             {/* Contact Form */}
-            <div className="max-w-3xl bg-white shadow-md border rounded-2xl p-8 mt-16 w-full">
+            <div className="max-w-4xl bg-white shadow-md border border-black/10 rounded-2xl p-8 mt-16 w-full">
                 <h2 className="text-2xl font-semibold text-green-700 text-center mb-6">Send Us a Message</h2>
 
                 <form className="space-y-6">

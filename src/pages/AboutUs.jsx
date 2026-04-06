@@ -24,7 +24,7 @@ export default function AboutUs() {
             {/* Values Grid */}
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mt-14 w-full">
                 {/* Card 1 */}
-                <div className="p-6 rounded-2xl shadow border bg-white text-center space-y-2">
+                <div className="p-6 rounded-2xl shadow border border-black/10 bg-white text-center space-y-2">
                     <h3 className="text-lg font-semibold text-green-700">Trusted Care</h3>
                     <p className="text-gray-600 text-sm">
                         Every service is handled with professionalism and compassion.
@@ -32,7 +32,7 @@ export default function AboutUs() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="p-6 rounded-2xl shadow border bg-white text-center space-y-2">
+                <div className="p-6 rounded-2xl shadow border border-black/10 bg-white text-center space-y-2">
                     <h3 className="text-lg font-semibold text-green-700">Experienced Team</h3>
                     <p className="text-gray-600 text-sm">
                         Our caretakers are trained and certified for pet handling.
@@ -40,7 +40,7 @@ export default function AboutUs() {
                 </div>
 
                 {/* Card 3 */}
-                <div className="p-6 rounded-2xl shadow border bg-white text-center space-y-2">
+                <div className="p-6 rounded-2xl shadow border border-black/10 bg-white text-center space-y-2">
                     <h3 className="text-lg font-semibold text-green-700">Safe & Loving</h3>
                     <p className="text-gray-600 text-sm">
                         We ensure safety, comfort, and a loving environment for every pet.

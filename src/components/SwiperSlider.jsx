@@ -30,7 +30,7 @@ const SwiperSlider = ({ slides }) => {
                         <div className="bg-white shadow-md overflow-hidden relative">
                             <img
                                 src={slide.image}
-                                className="w-full h-[350px] md:h-[400px] lg:h-[500px] brightness-50 object-cover"
+                                className="w-full h-[calc(100vh-50px)] brightness-50 object-cover"
                             />
                             <div className='text-white text-center absolute inset-0 flex items-center justify-center flex-col gap-4 p-5'>
                                 <h1 className='text-2xl lg:text-3xl font-bold'><span className='text-green-400'>WarmPaws</span> – Pet Care in Winter</h1>
