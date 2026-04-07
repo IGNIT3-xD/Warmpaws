@@ -38,15 +38,15 @@ const Home = () => {
             <section className="py-16 bg-green-700 text-white" data-aos="fade-up">
                 <div className="w-11/12 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     <div>
-                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} delay={1} end={100} />+</h3>
+                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} enableScrollSpy:true end={100} />+</h3>
                         <p className="md:text-xl text-green-100">Happy Pets</p>
                     </div>
                     <div>
-                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} delay={1} end={250} />+</h3>
+                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} enableScrollSpy:true end={250} />+</h3>
                         <p className="md:text-xl text-green-100">Services Done</p>
                     </div>
                     <div>
-                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} delay={1} end={20} />+</h3>
+                        <h3 className="text-4xl font-bold mb-2"><CountUp duration={3} enableScrollSpy:true end={20} />+</h3>
                         <p className="md:text-xl text-green-100">Expert Vets</p>
                     </div>
                     <div>
